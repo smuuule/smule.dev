@@ -27,5 +27,5 @@ function showSlides(n) {
 
 function getImageUrl(n) {
 console.log(n);
-    return "/okpolarn/" + n + ".bmp";
+    return "/media/okpolarn/" + n + ".bmp";
 }
