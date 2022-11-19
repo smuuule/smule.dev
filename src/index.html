@@ -29,6 +29,7 @@
                 },
                 help: function () {
                     this.echo("founder: returns this sites founder\n"
+                            + "resume: redirects to my resume\n"
                             + "gh3: redirects to a random picker for Guitar Hero III\n"
                             + "snake: redirects to a game of snake\n"
                             + "pong: redirects to a UNBEATABLE game of pong");
@@ -41,6 +42,9 @@
                 },
                 pong: function () {
                     window.location.href = "https://pong.smule.dev";
+                },
+                resume: function () {
+                    window.location.href = "https://cv.smule.dev";
                 }
             }, {
                 greetings: 'WELCOME TO SMULE.DEV'
