@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  
+jobs:
+  run_pull:
+    name: run pull
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Install SSH keys
+      run: |
+        set -e
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -t rsa,dsa ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+    - name: Connect, pull, and run Hugo
+      run: |
+        set -e
+        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+          "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && hugo && exit"
+    - name: Cleanup
+      run: |
+        set -e
+        rm -rf ~/.ssh
