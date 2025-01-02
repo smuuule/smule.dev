@@ -5,7 +5,7 @@ copyright = "Samuel Runmark Thunell ©"
 
 [params]
   name = "Samuel Runmark Thunell"
-  description = "Grabb på snart 23 år som pluggar Data"
+  description = "MSc Student in High-Performance Computer Systems at Chalmers"
   initials = "SRT"
   googleAnalytics = ""
   avatar = "images/profile.jpg"
