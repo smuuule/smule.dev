@@ -1,0 +1,17 @@
+/* Custom styles go here */
+.profile-picture {
+  border-radius: 40%;
+  overflow: hidden;
+  border: 5px solid #ccc;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1.75) translate(-5%, -15%);
+}
