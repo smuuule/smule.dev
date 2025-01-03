@@ -5,4 +5,4 @@ summary: "My Curriculum Vitae"
 layout: resume
 ---
 
-{{< embed-pdf url="cv-srt.pdf" hidePaginator="true">}}
+{{< pdf src="cv-srt.pdf#toolbar=0&view=Fit&page=1" width="100%" height="1000px" >}}
