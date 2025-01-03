@@ -10,19 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Install SSH keys
+    - name: install ssh keys
+      # check this thread to understand why its needed:
+      # https://stackoverflow.com/a/70447517
       run: |
-        set -e
-        mkdir -p ~/.ssh
+        install -m 600 -D /dev/null ~/.ssh/id_rsa
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -t rsa,dsa ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-    - name: Connect, pull, and run Hugo
-      run: |
-        set -e
-        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-          "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && hugo && exit"
-    - name: Cleanup
-      run: |
-        set -e
-        rm -rf ~/.ssh
+        ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+    - name: connect and pull
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull && hugo && exit"
+    - name: cleanup
+      run: rm -rf ~/.ssh
