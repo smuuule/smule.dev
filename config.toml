@@ -1,4 +1,4 @@
-baseURL = "localhost"
+baseURL = "https://smule.dev/"
 languageCode = "en-us"
 title = "SRT"
 copyright = "Samuel Runmark Thunell ©"
