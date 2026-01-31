@@ -4,77 +4,77 @@ title = "SRT"
 copyright = "Samuel Runmark Thunell ©"
 
 [params]
-  name = "Samuel Runmark Thunell"
-  description = "MSc Student in High-Performance Computer Systems at Chalmers University of Technology"
-  initials = "SRT"
-  googleAnalytics = ""
-  avatar = "images/profile.jpg"
+name = "Samuel Runmark Thunell"
+description = "MSc Student in High-Performance Computer Systems at Chalmers University of Technology"
+initials = "SRT"
+googleAnalytics = ""
+avatar = "images/profile.jpg"
 
-  [[params.social]]
-    name = "Github"
-    link = "https://github.com/smuuule"
-    icon = "fab fa-github"
+[[params.social]]
+name = "Github"
+link = "https://github.com/smuuule"
+icon = "fab fa-github"
 
-  [[params.social]]
-    name = "LinkedIn"
-    link = "https://www.linkedin.com/in/samuelrunmarkthunell/"
-    icon = "fab fa-linkedin-in"
+[[params.social]]
+name = "LinkedIn"
+link = "https://www.linkedin.com/in/samuelrunmarkthunell/"
+icon = "fab fa-linkedin-in"
 
-  [[params.social]]
-    name = "Instagram"
-    link = "https://www.instagram.com/samuel.runell/"
-    icon = "fab fa-instagram"
+[[params.social]]
+name = "Instagram"
+link = "https://www.instagram.com/samuel.runell/"
+icon = "fab fa-instagram"
 
-  [[params.social]]
-    name = "Facebook"
-    link = "https://www.facebook.com/samuel.thunell/"
-    icon = "fab fa-facebook"
+[[params.social]]
+name = "Facebook"
+link = "https://www.facebook.com/samuel.thunell/"
+icon = "fab fa-facebook"
 
 
 [menu]
-  [[menu.main]]
-    name = "Projects"
-    url = "/projects/"
-    weight = 1
-  [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 2
-  [[menu.main]]
-    name = "Resumé"
-    url = "/resume/"
-    weight = 3
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 4
+[[menu.main]]
+name = "Projects"
+url = "/projects/"
+weight = 1
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 2
+[[menu.main]]
+name = "Resumé"
+url = "/resume/"
+weight = 3
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 4
 
 
 [taxonomies]
-  garden_tags = 'garden_tags'
-  project_tags = 'project_tags'
-  library_tags = 'library_tags'
+garden_tags = 'garden_tags'
+project_tags = 'project_tags'
+library_tags = 'library_tags'
 
 
 [markup]
-  defaultMarkdownHandler = 'goldmark'
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.goldmark.parser]
-    autoHeadingID = true
-    autoHeadingIDType = 'github'
-    wrapStandAloneImageWithinParagraph = true
-    [markup.goldmark.parser.attribute]
-      block = false
-      title = true
-  [markup.goldmark.extensions]
-    definitionList = true
-    footnote = true
-    linkify = true
-    strikethrough = true
-    table = true
-    taskList = true
-    typographer = true
-  [markup.highlight]
-    # Choose from https://xyproto.github.io/splash/docs/all.html
-    style = 'friendly'
+defaultMarkdownHandler = 'goldmark'
+[markup.goldmark.renderer]
+unsafe = true
+[markup.goldmark.parser]
+autoHeadingID = true
+autoHeadingIDType = 'github'
+wrapStandAloneImageWithinParagraph = true
+[markup.goldmark.parser.attribute]
+block = false
+title = true
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
+typographer = true
+[markup.highlight]
+# Choose from https://xyproto.github.io/splash/docs/all.html
+style = 'friendly'
