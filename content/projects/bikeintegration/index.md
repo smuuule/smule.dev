@@ -1,6 +1,6 @@
 ---
 title: "Bike Integration in Västtrafik's Journey Planner"
-date: 2025-10-06
+date: 2024-01-04
 draft: false
 project_tags: ["web", "api"]
 summary: "Integrating bike routes into Västtrafik's journey planner to enhance multimodal transportation options"

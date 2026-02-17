@@ -1,13 +1,15 @@
-<div class="container">
-  <div class="row justify-content-between">
-    <div class="col-sm-4 col-8 d-flex flex-row">
-      <p class="footer">{{ .Site.Copyright }} {{ now.Format "2006"}} </p>
-    </div>
-    <div class="col-sm-6 col-8 d-flex flex-row-reverse">
-      {{ range .Site.Params.Social }}
-      <a class="footer-social px-2" {{ with .rel }} rel="{{ . }}" {{ end }} href="{{ .link }}" target="_blank"><i
-          class="{{ .icon }}"></i></a>
-      {{ end }}
+<footer class="fixed-bottom bg-white py-2">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-sm-4 col-8 d-flex flex-row align-items-center">
+        <p class="footer mb-0">{{ .Site.Copyright }} {{ now.Format "2006"}} </p>
+      </div>
+      <div class="col-sm-6 col-8 d-flex flex-row-reverse align-items-center">
+        {{ range .Site.Params.Social }}
+        <a class="footer-social px-2" {{ with .rel }} rel="{{ . }}" {{ end }} href="{{ .link }}" target="_blank"><i
+            class="{{ .icon }}"></i></a>
+        {{ end }}
+      </div>
     </div>
   </div>
-</div>
+</footer>

@@ -1,6 +1,6 @@
 /* Custom styles go here */
 .profile-picture {
-  border-radius: 40%;
+  border-radius: 12%;
   overflow: hidden;
   border: 5px solid #ccc;
 }
